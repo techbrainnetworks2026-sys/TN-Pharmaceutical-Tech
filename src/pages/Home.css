@@ -1,0 +1,366 @@
+.hero {
+  position: relative;
+  min-height: 650px;
+
+  background-image: 
+    linear-gradient(
+      135deg,
+      rgba(0, 85, 204, 0.55),
+      rgba(0, 61, 153, 0.45),
+      rgba(10, 102, 194, 0.25)
+    ),
+    url("../assets/pharma-bg2.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* remove this if causing issues */
+  background-attachment: fixed;
+
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(42, 162, 219, 0.2) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(46, 204, 113, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* keep the subtle lab pattern, but slightly reduce opacity so the photo shows through */
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='pharmaPattern' x='0' y='0' width='100' height='100' patternUnits='userSpaceOnUse'%3E%3C!-- Test tubes --%3E%3Cg opacity='0.05'%3E%3Crect x='10' y='20' width='15' height='60' fill='none' stroke='white' stroke-width='1' rx='3'/%3E%3Ccircle cx='17.5' cy='20' r='7.5' fill='none' stroke='white' stroke-width='1'/%3E%3Cpath d='M 15 45 L 20 55 L 22 55 L 25 45 Z' fill='white' opacity='0.15'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23pharmaPattern)'/%3E%3C/svg%3E");
+  opacity: 0.42;
+  pointer-events: none;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  margin-bottom: 2.5rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 300;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hero .btn {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+}
+
+/* Features Section */
+.features {
+  background: white;
+  background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='dotPattern' x='0' y='0' width='60' height='60' patternUnits='userSpaceOnUse'%3E%3Ccircle cx='30' cy='30' r='1.5' fill='%230055CC' opacity='0.08'/%3E%3C/pattern%3E%3Cpattern id='featuresPattern' x='0' y='0' width='80' height='80' patternUnits='userSpaceOnUse'%3E%3Cg opacity='0.03'%3E%3C!-- Stethoscope --%3E%3Cpath d='M 15 15 Q 20 25 25 25 Q 30 25 35 20' fill='none' stroke='%230055CC' stroke-width='2'/%3E%3Cline x1='25' y1='25' x2='25' y2='50' stroke='%230055CC' stroke-width='2'/%3E%3Ccircle cx='15' cy='12' r='3' fill='none' stroke='%230055CC' stroke-width='1.5'/%3E%3C!-- Flask --%3E%3Crect x='50' y='15' width='15' height='20' fill='none' stroke='%2328A745' stroke-width='1.5'/%3E%3Crect x='55' y='12' width='5' height='3' fill='none' stroke='%2328A745' stroke-width='1.5'/%3E%3Crect x='54' y='35' width='7' height='15' fill='none' stroke='%2328A745' stroke-width='1.5'/%3E%3C!-- Shield/Protection --%3E%3Cpath d='M 20 60 L 25 50 L 30 55 L 32 50 L 35 60 Z' fill='%23FF6B35' opacity='0.3'/%3E%3Crect x='20' y='50' width='15' height='20' fill='none' stroke='%23FF6B35' stroke-width='1.5' rx='2'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23featuresPattern)'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+}
+
+.feature-card {
+  text-align: center;
+  padding: 2rem;
+}
+
+.feature-icon {
+  color: var(--primary);
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.feature-card h3 {
+  color: var(--dark);
+  margin-bottom: 0.75rem;
+}
+
+.feature-card p {
+  color: var(--gray);
+  font-size: 0.95rem;
+}
+
+/* Featured Products Section */
+.featured-products {
+  background: #f8f9fa;
+  background-image: url("data:image/svg+xml,%3Csvg width='120' height='120' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='labBgPattern' x='0' y='0' width='120' height='120' patternUnits='userSpaceOnUse'%3E%3Cg opacity='0.04'%3E%3C!-- Microscope --%3E%3Ccircle cx='30' cy='30' r='12' fill='none' stroke='%230055CC' stroke-width='1.5'/%3E%3Crect x='22' y='48' width='16' height='25' fill='none' stroke='%230055CC' stroke-width='1.5'/%3E%3Cpath d='M 20 73 L 40 73' stroke='%230055CC' stroke-width='1.5'/%3E%3C!-- Test tube --%3E%3Crect x='65' y='25' width='12' height='50' fill='none' stroke='%2328A745' stroke-width='1.5' rx='2'/%3E%3Ccircle cx='71' cy='25' r='6' fill='none' stroke='%2328A745' stroke-width='1.5'/%3E%3Crect x='67' y='45' width='8' height='6' fill='%2328A745' opacity='0.3'/%3E%3C!-- Beaker --%3E%3Cpath d='M 100 20 L 90 70 L 110 70 Z' fill='none' stroke='%23FF6B35' stroke-width='1.5'/%3E%3Cpath d='M 92 45 L 108 45' stroke='%23FF6B35' stroke-width='1.5'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23labBgPattern)'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+}
+
+.product-card {
+  text-align: center;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.product-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-light), var(--secondary-light));
+}
+
+.product-illustration {
+  width: 100%;
+  height: 180px;
+  margin: 0 -2rem;
+  margin-bottom: 1.5rem;
+  margin-top: -2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #F5F7FA 0%, #E8F0FF 100%);
+  border-bottom: 2px solid var(--gray-light);
+}
+
+.product-illustration svg {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+}
+
+.product-icon {
+  color: var(--primary);
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  font-size: 3rem;
+}
+
+.product-card h3 {
+  color: var(--dark);
+  margin-bottom: 0.75rem;
+  font-size: 1.3rem;
+}
+
+.product-card p {
+  color: var(--gray);
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.learn-more {
+  color: var(--primary);
+  font-weight: 600;
+  transition: var(--transition);
+  display: inline-block;
+}
+
+.learn-more:hover {
+  color: var(--secondary);
+  transform: translateX(5px);
+}
+
+/* Industries Section */
+.industries {
+  background: white;
+  background-image: url("data:image/svg+xml,%3Csvg width='150' height='150' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='industryPattern' x='0' y='0' width='150' height='150' patternUnits='userSpaceOnUse'%3E%3Cg opacity='0.03'%3E%3C!-- Molecule/Atom Structure --%3E%3Ccircle cx='40' cy='40' r='4' fill='%230055CC'/%3E%3Ccircle cx='80' cy='50' r='3' fill='%2328A745'/%3E%3Ccircle cx='60' cy='80' r='4' fill='%23FF6B35'/%3E%3Cline x1='40' y1='40' x2='80' y2='50' stroke='%230055CC' stroke-width='1' opacity='0.5'/%3E%3Cline x1='40' y1='40' x2='60' y2='80' stroke='%2328A745' stroke-width='1' opacity='0.5'/%3E%3Cline x1='80' y1='50' x2='60' y2='80' stroke='%23FF6B35' stroke-width='1' opacity='0.5'/%3E%3C!-- DNA Helix Pattern --%3E%3Cpath d='M 110 20 Q 120 30 115 40 Q 110 50 120 60' fill='none' stroke='%237C3AED' stroke-width='1.5' opacity='0.5'/%3E%3Cpath d='M 130 20 Q 120 30 125 40 Q 130 50 120 60' fill='none' stroke='%237C3AED' stroke-width='1.5' opacity='0.5'/%3E%3Cline x1='110' y1='30' x2='130' y2='30' stroke='%237C3AED' stroke-width='0.5' opacity='0.4'/%3E%3Cline x1='115' y1='45' x2='125' y2='45' stroke='%237C3AED' stroke-width='0.5' opacity='0.4'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23industryPattern)'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+}
+
+.industry-card {
+  box-shadow: var(--shadow);
+  border-radius: var(--border-radius);
+}
+
+.industry-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.industry-card p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* CTA Section */
+.cta {
+  border-radius: 0;
+  background: linear-gradient(135deg, #0055CC 0%, #003D99 25%, #0055CC 100%) !important;
+  background-attachment: fixed;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='ctaPattern' x='0' y='0' width='100' height='100' patternUnits='userSpaceOnUse'%3E%3Cg opacity='0.08'%3E%3C!-- Capsule Pills --%3E%3Crect x='10' y='30' width='30' height='15' fill='white' rx='7.5'/%3E%3Crect x='20' y='30' width='10' height='15' fill='%23FF6B35' rx='5'/%3E%3C!-- Medical Cross --%3E%3Crect x='55' y='35' width='5' height='30' fill='white'/%3E%3Crect x='43' y='47' width='30' height='5' fill='white'/%3E%3C!-- Heartbeat Line --%3E%3Cpath d='M 10 80 L 20 80 L 23 70 L 28 90 L 35 80 L 45 80' fill='none' stroke='white' stroke-width='1.5'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23ctaPattern)'/%3E%3C/svg%3E");
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.cta h2 {
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+
+.cta p {
+  color: rgba(255, 255, 255, 0.95);
+  position: relative;
+  z-index: 1;
+}
+
+.cta .btn {
+  position: relative;
+  z-index: 1;
+}
+
+.section-header {
+  margin-bottom: 3rem;
+}
+
+.section-header h2 {
+  color: var(--dark);
+  margin-bottom: 0.75rem;
+  font-size: 2.5rem;
+  background: linear-gradient(135deg, var(--primary-light) 0%, var(--secondary-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-header p {
+  color: var(--gray);
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 500px;
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .hero-buttons {
+    gap: 0.75rem;
+  }
+
+  .hero .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+    width: 100%;
+  }
+
+  .section-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .section-header p {
+    font-size: 0.95rem;
+  }
+
+  .feature-card {
+    padding: 1.5rem;
+  }
+
+  .product-card {
+    padding: 1.5rem;
+  }
+
+  .industry-card {
+    padding: 2rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    min-height: 400px;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .hero .btn {
+    width: 100%;
+  }
+
+  .section-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .section-header {
+    margin-bottom: 2rem;
+  }
+
+  .feature-card,
+  .product-card {
+    padding: 1rem;
+  }
+}

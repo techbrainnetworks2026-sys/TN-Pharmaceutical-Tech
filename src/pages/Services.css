@@ -1,0 +1,202 @@
+.services .page-header {
+  background: linear-gradient(135deg, #0a1a2e 0%, #16213e 50%, #0055CC 100%);
+  background-attachment: fixed;
+  color: white;
+  padding: 3rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.services .page-header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='toolPattern' x='0' y='0' width='100' height='100' patternUnits='userSpaceOnUse'%3E%3Cg opacity='0.06'%3E%3Crect x='20' y='30' width='8' height='50' fill='none' stroke='white' stroke-width='1' rx='2'/%3E%3Ccircle cx='24' cy='30' r='4' fill='none' stroke='white' stroke-width='1'/%3E%3Crect x='50' y='20' width='12' height='60' fill='none' stroke='white' stroke-width='1' rx='3'/%3E%3Ccircle cx='56' cy='20' r='6' fill='none' stroke='white' stroke-width='1'/%3E%3Cpath d='M 22 55 L 26 70 L 28 70 L 32 55 Z' fill='white' opacity='0.2'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23toolPattern)'/%3E%3C/svg%3E");
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+.services .page-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.services .page-header p {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.service-card {
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+}
+
+.service-icon {
+  color: var(--primary);
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 1rem;
+}
+
+.service-card h3 {
+  color: var(--dark);
+  margin-bottom: 0.75rem;
+  font-size: 1.3rem;
+}
+
+.service-description {
+  color: var(--gray);
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.service-features {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--gray-light);
+}
+
+.service-features h4 {
+  color: var(--dark);
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.service-features ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.service-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  color: var(--gray);
+  font-size: 0.9rem;
+}
+
+.checkmark {
+  color: var(--secondary);
+  font-weight: 800;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Benefits Grid */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.benefit-item {
+  padding: 2rem;
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  position: relative;
+  padding-left: 3.5rem;
+}
+
+.benefit-number {
+  position: absolute;
+  left: 1.5rem;
+  top: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--primary);
+  opacity: 0.3;
+  font-family: 'Poppins', sans-serif;
+}
+
+.benefit-item h4 {
+  color: var(--dark);
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+}
+
+.benefit-item p {
+  color: var(--gray);
+  font-size: 0.9rem;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .services .page-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .service-card {
+    padding: 1.5rem;
+  }
+
+  .service-icon {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-card {
+    padding: 1rem;
+  }
+
+  .service-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .service-description {
+    font-size: 0.9rem;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .benefit-item {
+    padding: 1.5rem;
+    padding-left: 3rem;
+  }
+
+  .benefit-number {
+    font-size: 1.5rem;
+    left: 1rem;
+  }
+}

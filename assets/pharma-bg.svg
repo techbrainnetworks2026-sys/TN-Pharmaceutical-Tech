@@ -1,0 +1,21 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 400'>
+  <defs>
+    <linearGradient id='g' x1='0' x2='1'>
+      <stop offset='0' stop-color='#0055CC'/>
+      <stop offset='1' stop-color='#28A745'/>
+    </linearGradient>
+  </defs>
+  <rect width='100%' height='100%' fill='url(#g)' opacity='0.08'/>
+  <g fill='none' stroke='#ffffff' stroke-opacity='0.7' stroke-width='2'>
+    <!-- Capsule -->
+    <rect x='40' y='80' rx='28' ry='28' width='180' height='64' fill='#ffffff' opacity='0.12'/>
+    <line x1='130' y1='80' x2='130' y2='144' stroke='#ffffff' stroke-opacity='0.18' stroke-width='1.5'/>
+    <!-- DNA helix stylized -->
+    <path d='M 320 60 Q 340 100 320 140 Q 300 180 320 220 Q 340 260 320 300' stroke='#ffffff' stroke-opacity='0.5' stroke-width='3' fill='none'/>
+    <path d='M 360 60 Q 340 100 360 140 Q 380 180 360 220 Q 340 260 360 300' stroke='#ffffff' stroke-opacity='0.45' stroke-width='2' fill='none'/>
+    <!-- Molecule nodes -->
+    <circle cx='560' cy='140' r='14' fill='#ffffff' opacity='0.12'/>
+    <circle cx='620' cy='170' r='10' fill='#ffffff' opacity='0.12'/>
+    <line x1='560' y1='140' x2='620' y2='170' stroke='#ffffff' stroke-opacity='0.25' stroke-width='2'/>
+  </g>
+</svg>
