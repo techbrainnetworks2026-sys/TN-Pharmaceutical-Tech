@@ -38,8 +38,12 @@ export default function Navbar() {
       <div className="navbar-container">
         {/* Logo */}
         <Link to="/" className="navbar-logo">
-          <span className="logo-text">TECHBRAIN</span>
-          <span className="logo-subtext">NETWORKS</span>
+          <div className="logo-main-row">
+            <span className="logo-text">TECHBRAIN</span>
+            <span className="logo-divider">|</span>
+            <span className="logo-text">NETWORKS</span>
+          </div>
+          <span className="logo-division">Pharmaceutical</span>
         </Link>
 
         {/* Toggle Button */}

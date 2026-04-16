@@ -20,23 +20,55 @@
 .navbar-logo {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   font-weight: 800;
   cursor: pointer;
   transition: var(--transition);
+  text-decoration: none;
+  gap: 1px;
 }
 
 .navbar-logo:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
+}
+
+.logo-main-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .logo-text {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   color: var(--primary-light);
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  line-height: 1;
 }
 
+.logo-divider {
+  font-size: 1rem;
+  color: var(--secondary-light);
+  opacity: 0.5;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.logo-division {
+  font-size: 0.62rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--secondary-light);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  margin-top: 1px;
+  padding-left: 2px;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  width: 100%;
+}
+
+/* Legacy - keep for backward compat */
 .logo-subtext {
   font-size: 0.65rem;
   color: var(--secondary-light);
@@ -240,7 +272,13 @@
   }
 
   .logo-text {
-    font-size: 1rem;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+  }
+
+  .logo-division {
+    font-size: 0.5rem;
+    letter-spacing: 3px;
   }
 
   .logo-subtext {
