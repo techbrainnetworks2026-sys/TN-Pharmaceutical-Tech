@@ -119,10 +119,10 @@ export default function Home() {
               pharmaceutical lifecycle.
             </p>
             <div className="hero-buttons fade-in">
-              <Link to="/contact" className="btn btn-primary">
+              <Link to="/contact" className="btn-hero-primary">
                 Get Started
               </Link>
-              <Link to="/products" className="btn btn-outline">
+              <Link to="/products" className="btn-hero-outline">
                 Explore Products
               </Link>
             </div>
